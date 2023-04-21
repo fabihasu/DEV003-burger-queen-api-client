@@ -1,14 +1,16 @@
-import style from './styles/Home.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
+import waiterStyle from './styles/Waiter.module.css'
 
 export default function waiter() {
     return (
         <>
-        <header className={style.card}>
-          <div>
+        <header>
+
+          <div className= {waiterStyle.header}>
 
           <Image 
+          className={waiterStyle.logoBq}
           src="/bq-logo.jpg"
           alt= "BQ logo"
           width={100}
@@ -16,10 +18,13 @@ export default function waiter() {
           priority
           />
 
-          <h1>BURGER QUEEN</h1>
-          <Link href='/kitchen'><button>Cocina</button> </Link>
+          <h1 className= {waiterStyle.bqTitle}>BURGER <span className={waiterStyle.queen} >QUEEN</span></h1>
+         <div className= {waiterStyle.divbtns}>
+             <Link href='/kitchen'><button className={waiterStyle.wbtns}>Cocina</button> </Link>
              
-            <button>Órdenes</button>
+             <button className={waiterStyle.wbtns}>Órdenes</button>
+         </div>
+
           </div>
         </header>
         </>
