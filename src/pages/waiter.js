@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Menus from './components_waiter/menus'
+import Orden from './components_waiter/orden'
 import waiterStyle from './styles/Waiter.module.css'
 
 export default function waiter() {
@@ -29,6 +30,7 @@ export default function waiter() {
         </header>
         <button>Salir</button>
         <Menus/>
+        <Orden/>
         </>
     )
 }
