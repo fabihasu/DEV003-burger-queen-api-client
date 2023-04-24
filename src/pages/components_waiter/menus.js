@@ -1,8 +1,8 @@
-import Image from "next/image"
 import axios from 'axios'
+import waiter from '../styles/Waiter.module.css'
 import { useState, useEffect } from "react"
 
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RicUBnbWFpbC5jb20iLCJpYXQiOjE2ODIzNjY3NDMsImV4cCI6MTY4MjM3MDM0Mywic3ViIjoiMyJ9.pt4h3q9Iv6zjVArtu1GE1kmIo8wt6QNxxQvjuVuPd9E"
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYWx1aXNhQGdtYWlsLmNvbSIsImlhdCI6MTY4MjM3Mzc5NiwiZXhwIjoxNjgyMzc3Mzk2LCJzdWIiOiIzIn0.j9C-Lo6XAUTTj-ZcwTta0ZeKh0nVtS1UFdSjzKcyFK4";
 function ProductsMenus() {
     const [product, setProduct] = useState([])
 
@@ -24,11 +24,11 @@ function ProductsMenus() {
         {
             product.map(element => {
                 return (
-                    <div key={element.id}>
-                    <img src={element.image} alt={element.name}/>
-                    <p>{element.name} </p>
-                    <p>{element.price} </p>
-                    <button>Añadir</button>
+                    <div key={element.id} className={waiter.divproduct}>
+                    <img src={element.image} alt={element.name} className={waiter.images}/>
+                    <p className={waiter.product}>{element.name} </p>
+                    <p className={waiter.productprice} > ${element.price} </p>
+                    <button className={waiter.addbtn} >Añadir</button>
                     </div>
                 )
             })
