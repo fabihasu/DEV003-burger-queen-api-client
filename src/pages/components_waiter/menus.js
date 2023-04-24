@@ -2,7 +2,7 @@ import Image from "next/image"
 import axios from 'axios'
 import { useState, useEffect } from "react"
 
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYWx1aXNhQGdtYWlsLmNvbSIsImlhdCI6MTY4MjM1MTI3MywiZXhwIjoxNjgyMzU0ODczLCJzdWIiOiIzIn0.99WD4KPadSdosUFEzgjqRwbPGjYnhwRzvns-30uh0ng"
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RicUBnbWFpbC5jb20iLCJpYXQiOjE2ODIzNjY3NDMsImV4cCI6MTY4MjM3MDM0Mywic3ViIjoiMyJ9.pt4h3q9Iv6zjVArtu1GE1kmIo8wt6QNxxQvjuVuPd9E"
 function ProductsMenus() {
     const [product, setProduct] = useState([])
 

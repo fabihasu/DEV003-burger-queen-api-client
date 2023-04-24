@@ -6,13 +6,13 @@ export default function Orden(){
         <h2>Orden</h2>
         <div></div>
         <div className={waiter.orderBox}>
-            <input placeholder= "Cliente"/>
-            <input placeholder= "Mesa"/>
-            <p>Total</p>
+            <input className= {waiter.client}placeholder= "Cliente"/>
+            <input className= {waiter.table}placeholder= "Mesa"/>
+            <p className={waiter.totalOrder}>Total</p>
         </div>
         
-        <button>Limpiar Orden</button>
-        <button>Enviar</button>
+        <button className={waiter.cleanOrder}>Limpiar Orden</button>
+        <button className={waiter.sendKitchen}>Enviar</button>
       </div>
     )
 }
