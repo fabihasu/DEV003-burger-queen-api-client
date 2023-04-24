@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import Menus from './components_waiter/menus'
 import waiterStyle from './styles/Waiter.module.css'
 
 export default function waiter() {
@@ -24,9 +25,10 @@ export default function waiter() {
              
              <button className={waiterStyle.wbtns}>Órdenes</button>
          </div>
-
           </div>
         </header>
+        <button>Salir</button>
+        <Menus/>
         </>
     )
 }
