@@ -2,7 +2,7 @@ import axios from 'axios'
 import waiter from '../styles/Waiter.module.css'
 import { useState, useEffect } from "react"
 
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYWx1aXNhQGdtYWlsLmNvbSIsImlhdCI6MTY4MjQzOTYxMywiZXhwIjoxNjgyNDQzMjEzLCJzdWIiOiIzIn0.Te9fdDA2lVKXUB9v4ZTqWJ0DLHsicc4E1MSh-t_emr4";
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RicUBnbWFpbC5jb20iLCJpYXQiOjE2ODI1MzQzNDUsImV4cCI6MTY4MjUzNzk0NSwic3ViIjoiMyJ9.D8dY-w9dfUTj9-U7VQk8uR9jigdcPYFVRHTfhgu0MAw";
 function ProductsMenus() {
     const [product, setProduct] = useState([])
 
@@ -42,8 +42,8 @@ export default function Menus(){
       <div>
         <h2>menús</h2>
         <div></div>
-        <button>DESAYUNO</button>
-        <button>ALMUERZO</button>
+        <button className={waiter.desayunoBtn}>DESAYUNO</button>
+        <button className={waiter.almuerzoBtn}>ALMUERZO</button>
         <ProductsMenus/>
       </div>
     )
