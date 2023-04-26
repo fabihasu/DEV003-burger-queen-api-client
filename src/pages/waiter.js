@@ -28,9 +28,11 @@ export default function waiter() {
          </div>
           </div>
         </header>
-        <button>Salir</button>
+         <div className= {waiterStyle.divMain}>
         <Menus/>
         <Orden/>
+        </div>
+        <button className={waiterStyle.exitBtn}>Salir</button>
         </>
     )
 }

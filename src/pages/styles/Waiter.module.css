@@ -72,20 +72,30 @@
 .totalOrder{
     color:#FF8C8C;
     font-family: "Krub";
+    margin-top: 300px;
+    margin-left: 20px;
 
 }
 .cleanOrder{
     background-color: #9B564A;
+    font-family: krub;
+    margin-top: 20px;
     border-radius: 5px;
     border:white;
     color: white;
-
+    margin-right: 20px;
+    height: 40px;
+    width: 120px;
 }
 .sendKitchen{
     background-color: #DD5A44;
+    font-family: krub;
+    margin-top: 20px;
     border-radius: 5px;
     border:white;
     color: white;
+    height: 40px;
+    width: 70px;
 }
 .images{
     margin-top: 15px;
@@ -126,4 +136,35 @@
     left: 220px;
     font-size: 20px;
     font-family: 'Krub';
+}
+.desayunoBtn{
+    color: white;
+    font-family: Inder;
+    background-color:#4E4A4A ;
+    margin-bottom: 10px;
+}
+.almuerzoBtn{
+    color: white;
+    font-family: Inder;
+    background-color:#4E4A4A ;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.divproduct{
+    color:white;
+    font-family: inder;
+}
+.divMain{
+    display: flex;
+    flex-direction: row;
+}
+.orderComp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.exitBtn{
+    margin-top: 50px;
 }
