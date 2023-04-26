@@ -49,7 +49,7 @@
     color:white;
     background-color: transparent;
     width: 100px;
-    height: 40px;
+    height: 35px;
 }
 .client::placeholder{
     color: white;
@@ -63,7 +63,7 @@
     color:white;
     background-color: transparent;
     width: 80px;
-    height: 40px;
+    height: 35px;
 }
 .table::placeholder{
     color: white;

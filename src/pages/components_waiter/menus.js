@@ -2,7 +2,7 @@ import axios from 'axios'
 import waiter from '../styles/Waiter.module.css'
 import { useState, useEffect } from "react"
 
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYWx1aXNhQGdtYWlsLmNvbSIsImlhdCI6MTY4MjM3Mzc5NiwiZXhwIjoxNjgyMzc3Mzk2LCJzdWIiOiIzIn0.j9C-Lo6XAUTTj-ZcwTta0ZeKh0nVtS1UFdSjzKcyFK4";
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYWx1aXNhQGdtYWlsLmNvbSIsImlhdCI6MTY4MjQzOTYxMywiZXhwIjoxNjgyNDQzMjEzLCJzdWIiOiIzIn0.Te9fdDA2lVKXUB9v4ZTqWJ0DLHsicc4E1MSh-t_emr4";
 function ProductsMenus() {
     const [product, setProduct] = useState([])
 
