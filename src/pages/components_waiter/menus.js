@@ -2,7 +2,7 @@ import axios from 'axios'
 import waiter from '../styles/Waiter.module.css'
 import { useState, useEffect } from "react"
 
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RicUBnbWFpbC5jb20iLCJpYXQiOjE2ODI1MzQzNDUsImV4cCI6MTY4MjUzNzk0NSwic3ViIjoiMyJ9.D8dY-w9dfUTj9-U7VQk8uR9jigdcPYFVRHTfhgu0MAw";
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYWx1aXNhQGdtYWlsLmNvbSIsImlhdCI6MTY4MjU0MDU3MSwiZXhwIjoxNjgyNTQ0MTcxLCJzdWIiOiIzIn0.1AECKwcdX56A765oKzf5T6clnUPx5E4S6ACds1oQ4XY"
 function ProductsMenus() {
     const [product, setProduct] = useState([])
 
@@ -18,7 +18,7 @@ function ProductsMenus() {
         .then(response => setProduct(response.data))
         .catch(console.log)
     }, [])
-     
+ 
      return (
         <>
         {
@@ -39,8 +39,8 @@ function ProductsMenus() {
 
 export default function Menus(){
     return (
-      <div>
-        <h2>menús</h2>
+      <div className={waiter.menuComp}>
+        <h2 className={waiter.underline}>menús</h2>
         <div></div>
         <button className={waiter.desayunoBtn}>DESAYUNO</button>
         <button className={waiter.almuerzoBtn}>ALMUERZO</button>
