@@ -3,7 +3,7 @@ import waiter from '../styles/Waiter.module.css'
 import { useState, useEffect } from "react"
 import RenderMenus from './rendermenus'
 
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYWx1aXNhQGdtYWlsLmNvbSIsImlhdCI6MTY4MjYxNjg4NywiZXhwIjoxNjgyNjIwNDg3LCJzdWIiOiIzIn0.oO_HNg3nKUoZSqxBOGmrQlXfl5IH_2ZhJP9ZyZdrcmI"
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYWx1aXNhQGdtYWlsLmNvbSIsImlhdCI6MTY4MjcxMzk3MCwiZXhwIjoxNjgyNzE3NTcwLCJzdWIiOiIzIn0.iFj87ViMjxnUbmf3fPhS04HqMU3WkRowL5VM_YM7NfY";
 
 function ProductsMenus() {
     const [product, setProduct] = useState([])

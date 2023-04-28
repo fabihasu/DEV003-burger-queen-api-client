@@ -32,7 +32,15 @@ export default function waiter() {
         <Menus/>
         <Orden/>
         </div>
-        <button className={waiterStyle.exitBtn}>Salir</button>
+        <Image 
+        className={waiterStyle.backimg}
+        src="/hamburguesafondo.png"
+        alt="fondo"
+        width={830}
+        height={730}
+        priority
+        />
+        <button className={waiterStyle.exitBtn}>SALIR</button>
         </>
     )
 }

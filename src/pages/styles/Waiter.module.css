@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
+.backimg{
+    position: absolute;
+    top:450px;
+    z-index: 0;
+    opacity: 0.4;
+}
 .header{
     display:flex;
     flex-direction: row;
@@ -81,23 +87,27 @@
 .cleanOrder{
     background-color: #9B564A;
     font-family: krub;
-    margin-top: 20px;
     border-radius: 5px;
     border:1px solid white;
     color: white;
-    margin-right: 20px;
     height: 40px;
     width: 120px;
+    position: relative;
+    top: 18px;
+    right: 50px;
 }
 .sendKitchen{
     background-color: #DD5A44;
     font-family: krub;
-    margin-top: 20px;
+    font-size: 20px;
     border-radius: 5px;
     border:1px solid white;
     color: white;
     height: 40px;
-    width: 70px;
+    width: 100px;
+    position: relative;
+    top: 20px;
+    left: 50px;
 }
 .images{
     margin-top: 15px;
@@ -141,17 +151,36 @@
 }
 .desayunoBtn{
     color: white;
-    font-family: Inder;
+    font-family: Krub;
     background-color:#4E4A4A ;
     margin-top: 30px;
+    width: 180px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 3px;
+    margin-left: 20px;
 }
 .almuerzoBtn{
     color: white;
-    font-family: Inder;
+    font-family: Krub;
     background-color:#4E4A4A ;
     margin-top: 30px;
-    margin-left: 20px;
-    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-bottom: 25px;
+    width: 180px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 3px;
+}
+.almuerzoBtn:active{
+    color:#FF7979;
+}
+.desayunoBtn:active{
+    color:#FF7979;
 }
 .divproduct{
     color:white;
@@ -165,6 +194,8 @@
 .menuComp{
     text-align: center;
     margin-top: 50px;
+    z-index: 1;
+    height: 900px;
 }
 .orderComp{
     display: flex;
@@ -172,9 +203,22 @@
     align-items: center;
     margin-left: 50px;
     margin-top: 50px;
+    z-index: 1;
 }
 .exitBtn{
-    margin-top: 50px;
+
+    color:black;
+    background-color: #FF7979;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    font-family: 'Krub';
+    font-weight: bolder;
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
 }
 .underline {
     font-size: 30px;
