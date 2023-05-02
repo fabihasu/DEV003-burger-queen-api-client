@@ -1,42 +1,27 @@
-import axios from 'axios'
 import waiter from '../styles/Waiter.module.css'
-import { useState, useEffect } from "react"
+import { useState, useContext, useEffect } from "react"
 import RenderMenus from './rendermenus'
-
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYWx1aXNhQGdtYWlsLmNvbSIsImlhdCI6MTY4MjcxMzk3MCwiZXhwIjoxNjgyNzE3NTcwLCJzdWIiOiIzIn0.iFj87ViMjxnUbmf3fPhS04HqMU3WkRowL5VM_YM7NfY";
+import { ProductsContext } from './productsContext'
 
 function ProductsMenus() {
-    const [product, setProduct] = useState([])
+
     const [filteredProduct, setFilteredProduct] = useState([])
-
-    useEffect(() => {
-        
-        axios({
-            method : 'GET',
-            url: 'http://localhost:8080/products',
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        })
-        .then(response => {
-            setProduct(response.data)
-            setFilteredProduct(response.data)
-        })
-        .catch(console.log)
-    }, [])
-
+    const productInfo = useContext(ProductsContext)
     
+    useEffect(() => {
+        setFilteredProduct(productInfo)
+    }, [productInfo])
+
     function handleClick(event) {
         const buttonval = event.target.value;
         
         switch (buttonval) {
             case 'Desayuno': 
-             setFilteredProduct(product.filter(element => element.type === 'Desayuno'))
-
+             setFilteredProduct(productInfo.filter(element => element.type === 'Desayuno'))
             break;
 
             case 'Almuerzo':
-                setFilteredProduct(product.filter(element => element.type === 'Almuerzo'))
+                setFilteredProduct(productInfo.filter(element => element.type === 'Almuerzo'))
             break;
 
             //no default
@@ -50,17 +35,17 @@ function ProductsMenus() {
         {
             filteredProduct.map(item => {
                 return (
-                    <>
+                 <>
                     <RenderMenus
-                 id={item.id}
-                 image={item.image}
-                 name={item.name}
-                 price={item.price}
-                />
-                    </>
+                    id={item.id}
+                    image={item.image}
+                    name={item.name}
+                    price={item.price}
+                    />
+                 </>
                 )
 
-             })
+            })
         }
      </>
     )
