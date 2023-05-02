@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Menus from './components_waiter/menus'
 import Orden from './components_waiter/orden'
 import waiterStyle from './styles/Waiter.module.css'
+import { ProductContextProvider } from './components_waiter/productsContext'
+import { TotalProvider } from './components_waiter/totalContext'
 
 export default function waiter() {
     return (
@@ -28,11 +30,24 @@ export default function waiter() {
          </div>
           </div>
         </header>
-         <div className= {waiterStyle.divMain}>
-        <Menus/>
-        <Orden/>
-        </div>
-        <button className={waiterStyle.exitBtn}>Salir</button>
+        <ProductContextProvider>
+          <TotalProvider>
+           <div className= {waiterStyle.divMain}>
+             <Menus/>
+             <Orden/>
+           </div>
+          </TotalProvider>
+        </ProductContextProvider>
+         
+        <Image 
+        className={waiterStyle.backimg}
+        src="/hamburguesafondo.png"
+        alt="fondo"
+        width={830}
+        height={730}
+        priority
+        />
+        <button className={waiterStyle.exitBtn}>SALIR</button>
         </>
     )
 }

@@ -1,50 +1,64 @@
-import axios from 'axios'
 import waiter from '../styles/Waiter.module.css'
-import { useState, useEffect } from "react"
+import { useState, useContext, useEffect } from "react"
+import RenderMenus from './rendermenus'
+import { ProductsContext } from './productsContext'
 
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RicUBnbWFpbC5jb20iLCJpYXQiOjE2ODI1MzQzNDUsImV4cCI6MTY4MjUzNzk0NSwic3ViIjoiMyJ9.D8dY-w9dfUTj9-U7VQk8uR9jigdcPYFVRHTfhgu0MAw";
 function ProductsMenus() {
-    const [product, setProduct] = useState([])
 
+    const [filteredProduct, setFilteredProduct] = useState([])
+    const productInfo = useContext(ProductsContext)
+    
     useEffect(() => {
+        setFilteredProduct(productInfo)
+    }, [productInfo])
+
+    function handleClick(event) {
+        const buttonval = event.target.value;
         
-        axios({
-            method : 'GET',
-            url: 'http://localhost:8080/products',
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        })
-        .then(response => setProduct(response.data))
-        .catch(console.log)
-    }, [])
-     
-     return (
-        <>
+        switch (buttonval) {
+            case 'Desayuno': 
+             setFilteredProduct(productInfo.filter(element => element.type === 'Desayuno'))
+            break;
+
+            case 'Almuerzo':
+                setFilteredProduct(productInfo.filter(element => element.type === 'Almuerzo'))
+            break;
+
+            //no default
+        }
+    } 
+
+    return (
+     <>
+      <button onClick={handleClick} value='Desayuno' className={waiter.desayunoBtn}>DESAYUNO</button>
+      <button onClick={handleClick} value='Almuerzo' className={waiter.almuerzoBtn}>ALMUERZO</button>
         {
-            product.map(element => {
+            filteredProduct.map(item => {
                 return (
-                    <div key={element.id} className={waiter.divproduct}>
-                    <img src={element.image} alt={element.name} className={waiter.images}/>
-                    <p className={waiter.product}>{element.name} </p>
-                    <p className={waiter.productprice} > ${element.price} </p>
-                    <button className={waiter.addbtn} >Añadir</button>
-                    </div>
+                 <>
+                    <RenderMenus
+                    id={item.id}
+                    image={item.image}
+                    name={item.name}
+                    price={item.price}
+                    />
+                 </>
                 )
+
             })
         }
-        </>
-     )
+     </>
+    )
 }
 
 export default function Menus(){
     return (
-      <div>
-        <h2>menús</h2>
+      <div className={waiter.menuComp}>
+
+        <h2 className={waiter.underline}>menús</h2>
         <div></div>
-        <button className={waiter.desayunoBtn}>DESAYUNO</button>
-        <button className={waiter.almuerzoBtn}>ALMUERZO</button>
         <ProductsMenus/>
+
       </div>
     )
 }
