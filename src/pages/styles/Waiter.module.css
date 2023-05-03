@@ -80,7 +80,7 @@
 .totalOrder{
     color:#FF8C8C;
     font-family: "Krub";
-    margin-top: 300px;
+    margin-top: 30px;
     margin-left: 20px;
 
 }
@@ -226,4 +226,8 @@
     font-family: 'Lemon';
     text-decoration: underline;
     text-decoration-color: #FF7979;
+}
+.divOrder {
+    display: flex;
+    background-color: rgb(127, 127, 29);
 }

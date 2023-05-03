@@ -5,6 +5,7 @@ import Orden from './components_waiter/orden'
 import waiterStyle from './styles/Waiter.module.css'
 import { ProductContextProvider } from './components_waiter/productsContext'
 import { TotalProvider } from './components_waiter/totalContext'
+import { OrderProvider } from './components_waiter/orderContext'
 
 export default function waiter() {
     return (
@@ -31,12 +32,14 @@ export default function waiter() {
           </div>
         </header>
         <ProductContextProvider>
+          <OrderProvider>
           <TotalProvider>
            <div className= {waiterStyle.divMain}>
              <Menus/>
              <Orden/>
            </div>
           </TotalProvider>
+          </OrderProvider>
         </ProductContextProvider>
          
         <Image 
