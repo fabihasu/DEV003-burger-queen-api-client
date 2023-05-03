@@ -2,7 +2,7 @@ import {useState, useEffect, createContext} from 'react'
 import axios from 'axios'
 
 export const ProductsContext = createContext()
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYWx1aXNhQGdtYWlsLmNvbSIsImlhdCI6MTY4MzA2MDE3NSwiZXhwIjoxNjgzMDYzNzc1LCJzdWIiOiIzIn0.mICBwW0y40EcjwMAVq0Rgi4SDN7RZcE739Saa1HZuEQ"
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RicUBnbWFpbC5jb20iLCJpYXQiOjE2ODMwODE0ODcsImV4cCI6MTY4MzA4NTA4Nywic3ViIjoiMyJ9.UsAkj2XUgi3dvy7qBJOZypyO0q2s0YcSEBoQvdGsmc0"
 
 export const ProductContextProvider = ({children}) => {
     const [products, setProducts] = useState([])

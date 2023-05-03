@@ -11,11 +11,20 @@ export default function RenderMenus(props) {
     const toOrder = () => {
         setTotal(total + props.price)
 
-        setOrder(() => { 
-            order ??=  {}
-            const bbb = order.products = [props]
-            return Object.assign(order, bbb)
-        })
+        // setOrder(() => { 
+        //     order ??=  {}
+        //     const bbb = order.products = [props]
+        //     return Object.assign(order, bbb)
+        // })
+
+        const orderToAdd = {
+            id: props.id,
+            image: props.image,
+            name: props.name,
+            price: props.price
+        }
+
+        setOrder(order.concat([orderToAdd]))
         
     }
     

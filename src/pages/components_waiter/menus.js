@@ -1,5 +1,5 @@
 import waiter from '../styles/Waiter.module.css'
-import { useState, useContext, useEffect } from "react"
+import { useState, useContext, useEffect, Fragment } from "react"
 import RenderMenus from './rendermenus'
 import { ProductsContext } from './productsContext'
 
@@ -35,16 +35,15 @@ function ProductsMenus() {
         {
             filteredProduct.map(item => {
                 return (
-                 <>
+                 <Fragment key={item.id}>
                     <RenderMenus
                     id={item.id}
                     image={item.image}
                     name={item.name}
                     price={item.price}
                     />
-                 </>
+                 </Fragment>
                 )
-
             })
         }
      </>
