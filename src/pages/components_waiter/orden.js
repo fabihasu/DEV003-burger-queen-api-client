@@ -20,12 +20,13 @@ export default function Orden(){
              {
               order.map((item, index) =>{ 
                 return (
+                  <div key={index} className={waiter.divOrder}>
                   <RenderOrderProduct
-                  key={index}
                   qty={1}
                   name={item.name}
                   price={item.price}
                 />
+                </div>
                 )
               }) 
             }
