@@ -9,7 +9,7 @@ export default function Orden(){
   const [total, setTotal] = useContext(TotalContext) 
   const [order, setOrder] = useContext(OrderContext)
   console.log('order:,',order)
- 
+
     return (
       <div className={waiter.orderComp}>
         <h2 className={waiter.underline}>orden</h2>
@@ -19,12 +19,24 @@ export default function Orden(){
             <input className= {waiter.table}placeholder= "Mesa"/>
              {
               order.map((item, index) =>{ 
+
+                function decreaseQty (){
+                  setTotal(total - item.price)
+
+                  if(order[index].qty > 1) {
+                    order[index].qty = order[index].qty - 1
+
+                  } else if(order[index].qty === 1) {
+                    setOrder(order.filter(element => element.id !== item.id))
+                  }
+              }
                 return (
                   <div key={index} className={waiter.divOrder}>
                   <RenderOrderProduct
                   name={item.name}
                   price={item.price}
                   qty={item.qty}
+                  decreaseQty={decreaseQty}
                 />
                 </div>
                 )
