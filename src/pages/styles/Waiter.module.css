@@ -54,6 +54,7 @@
     border-radius: 5px;
     border-bottom: solid white 2px;
     outline: none;
+    margin-left: 50px;
     color:white;
     background-color: transparent;
     width: 100px;
@@ -68,6 +69,7 @@
     border-radius: 5px;
     border-bottom: solid white 2px;
     outline: none;
+    margin-left: 50px;
     color:white;
     background-color: transparent;
     width: 80px;
@@ -76,6 +78,7 @@
 .table::placeholder{
     color: white;
     text-align: center;
+    
 }
 .totalOrder{
     color:#FF8C8C;
@@ -229,5 +232,32 @@
 }
 .divOrder {
     display: flex;
-    background-color: rgb(127, 127, 29);
+    align-items: center;
+    margin-top: 15px;
+    color: white;
+    font-family: Krub;
+    font-size: 17px;
+
+}
+.minusBtn{
+    position:relative;
+    left: 10px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: #FF7979;
+    border:none;
+    font-size: 17px;
+    color:white;
+}
+.qty{
+    position:relative;
+    left: 15px;
+}
+.orderName{
+    margin-left: 20px;
+}
+.orderPrice{
+    position:absolute;
+    right: 30px;
 }
