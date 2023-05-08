@@ -22,9 +22,9 @@ export default function Orden(){
                 return (
                   <div key={index} className={waiter.divOrder}>
                   <RenderOrderProduct
-                  qty={1}
                   name={item.name}
                   price={item.price}
+                  qty={item.qty}
                 />
                 </div>
                 )
