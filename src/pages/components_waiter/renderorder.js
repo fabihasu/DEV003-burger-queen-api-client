@@ -1,10 +1,11 @@
+import waiter from "../styles/Waiter.module.css"
 export default function RenderOrderProduct(props) {
     return (
         <>
-            <button onClick={props.decreaseQty}> - </button>
-            <p>{props.qty}</p>
-            <p>{props.name}</p>
-            <p>${props.price}</p>
+            <button className={waiter.minusBtn} onClick={props.decreaseQty}> - </button>
+            <p className={waiter.qty}>{props.qty}</p>
+            <p className={waiter.orderName}>{props.name}</p>
+            <p className={waiter.orderPrice}>${props.price}</p>
         </>
     )
 }
