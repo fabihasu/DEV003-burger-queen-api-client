@@ -34,15 +34,15 @@ export default function Orden(){
       status: 'pending',
       dataEntry: showDate()
     }
-
+    
     axios.post('http://localhost:8080/orders', orderData, {
       headers: {
         Authorization: `Bearer ${token}`
       }
     })
-    .then(console.log)
-    .catch(console.log)
-    
+   .then(console.log)
+   .catch(console.log)
+
   }
 
     return (
