@@ -41,7 +41,7 @@ export default function Orden(){
       }
     })
    .then(console.log)
-   .catch(console.log)
+   .catch(console.log)   
 
   }
 
