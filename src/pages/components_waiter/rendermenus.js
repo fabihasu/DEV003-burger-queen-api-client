@@ -12,14 +12,19 @@ export default function RenderMenus(props) {
         setTotal(total + props.price)
 
         const orderToAdd = {
+            qty: 1,
+            product: {
             id: props.id,
             image: props.image,
             name: props.name,
             price: props.price,
-            qty: 1,
+            type: props.type,
+            dateEntry: props.dateEntry   
+            } 
         }
 
-        const indexOfitemExistInOrder = order.findIndex((item) => item.id === props.id)
+        const indexOfitemExistInOrder = order.findIndex((item) => item.product.id === props.id)
+        
         if(indexOfitemExistInOrder !== -1) {
             order[indexOfitemExistInOrder] = {
                 ...orderToAdd,

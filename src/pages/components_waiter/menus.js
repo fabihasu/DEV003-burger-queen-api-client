@@ -41,6 +41,8 @@ function ProductsMenus() {
                     image={item.image}
                     name={item.name}
                     price={item.price}
+                    type={item.type}
+                    dateEntry={item.dateEntry}
                     />
                   </div>
                 )
