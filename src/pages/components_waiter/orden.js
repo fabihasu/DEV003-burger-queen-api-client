@@ -6,30 +6,33 @@ import RenderOrderProduct from './renderorder'
 import { useState } from 'react'
 import axios from 'axios'
 import { token } from './productsContext'
+import { showDate } from './date'
 
 export default function Orden(){
 
   const [client, setClient] = useState('')
   const [total, setTotal] = useContext(TotalContext) 
   const [order, setOrder] = useContext(OrderContext)
+  const [orderId, setOrderId] = useState(0)
+  
 
   function handleChangeName(event) {
     setClient(event.target.value)
   }
 
   function sendToKitchen() {
-
+    setOrderId(orderId + 1)
     setClient('')
     setOrder([])
     setTotal(0)
-
+    
     const orderData = {
-      id: 4,
+      id: orderId,
       userId: 3,
       client: client,
       products: order,
       status: 'pending',
-      dataEntry: '9/05/2023 11:13'
+      dataEntry: showDate()
     }
 
     axios.post('http://localhost:8080/orders', orderData, {
@@ -39,7 +42,6 @@ export default function Orden(){
     })
     .then(console.log)
     .catch(console.log)
-
     
   }
 
